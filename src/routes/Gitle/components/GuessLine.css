@@ -1,0 +1,29 @@
+.line {
+  display: flex;
+  margin: auto;
+}
+
+.tile {
+  width: 40px;
+  height: 40px;
+  border: 1px solid hsl(28, 13%, 23%);
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: capitalize;
+}
+
+.correct {
+  background-color: hsl(11, 92%, 56%);
+}
+
+.close {
+  background-color: hsla(193, 97%, 34%, 0.481);
+}
+
+.incorrect {
+  background-color: hsl(53, 10%, 83%);
+}
+
+/* hsl(28,13%,23%) */

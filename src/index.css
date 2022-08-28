@@ -1,13 +1,206 @@
-body {
+:root {
+  --clr-primary-orange: hsl(11, 93%, 56%);
+  --clr-primary-dark: hsl(28, 13%, 23%);
+  --clr-neutral: hsl(60, 19%, 92%);
+  --clr-secondary: hsl(193, 97%, 34%);
+
+  --ff-primary: "Ubuntu", sans-serif;
+  --ff-code: "Courier Prime", monospace;
+  --ff-body: var(--ff-primary);
+  --ff-heading: var(--ff-primary);
+
+  --fw-regular: 400;
+  --fw-semi-bold: 500;
+  --fw-bold: 700;
+
+  --fs-small: 0.875rem;
+  --fs-medium: 1rem;
+  --fs-big: 1.5rem;
+  --fs-huge: 2.5rem;
+  --fs-button: var(--fs-medium);
+}
+
+@media (min-width: 35em) {
+  :root {
+    --fs-big: 2rem;
+    --fs-huge: 3.5rem;
+    --fs-medium: 1.125rem;
+  }
+}
+
+@media (min-width: 45em) {
+  :root {
+    --fs-big: 2.5rem;
+    --fs-huge: 4.5rem;
+    --fs-medium: 1.25rem;
+    --fs-small: 1rem;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  padding: 0;
+  font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests 
+default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer 
+not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* 
+=== Utilities ===
+*/
+
+.text-primary-orange {
+  color: var(--clr-primary-orange);
+}
+.text-primary-dark {
+  color: var(--clr-primary-dark);
+}
+.text-secondary {
+  color: var(--clr-secondary);
+}
+.text-neutral {
+  color: var(--clr-neutral);
+}
+
+.bg-primary-orange {
+  background-color: var(--clr-primary-orange);
+}
+.bg-primary-dark {
+  background-color: var(--clr-primary-dark);
+}
+.bg-secondary {
+  background-color: var(--clr-secondary);
+}
+.bg-neutral {
+  background-color: var(--clr-neutral);
+}
+
+.fw-regular {
+  font-weight: var(--fw-regular);
+}
+.fw-semi-bold {
+  font-weight: var(--fw-semi-bold);
+}
+.fw-bold {
+  font-weight: var(--fw-bold);
+}
+
+.fs-small {
+  font-size: var(--fs-small);
+}
+.fs-medium {
+  font-size: var(--fs-medium);
+}
+.fs-big {
+  font-size: var(--fs-big);
+  line-height: 1.2;
+}
+.fs-huge {
+  font-size: var(--fs-huge);
+  line-height: 1.15;
+}
+
+.container {
+  --max-width: 1100px;
+  --padding: 1rem;
+
+  width: min(
+    var(--max-width),
+    100% - (var(--padding) * 2)
+  ); /* Inside min you do not need calc */
+  margin-inline: auto;
+}
+
+/* 
+=== General Styling ===
+*/
+
+body {
+  font-size: var(--fs-medium);
+  font-family: var(--ff-body);
+  color: var(--clr-primary-dark);
+}
+
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: var(--ff-code);
+}
+
+.button {
+  cursor: pointer;
+  border-radius: 100vmax;
+  text-decoration: none; /* just in case there's a link with the style of a button */
+  padding: 1em 2.5em;
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-button);
+  border: 0;
+  background-color: var(--clr-primary-orange);
+  color: var(--clr-neutral);
+  box-shadow: 0 1.125em 1em -1em var(--clr-primary-orange);
+}
+
+/* I'm not using this. Just in case for the future styling */
+.button[data-type="inverted"] {
+  background-color: var(--clr-neutral);
+  color: var(--clr-primary-orange);
+}
+
+.button:hover,
+.button:focus-visible {
+  opacity: 0.75;
 }

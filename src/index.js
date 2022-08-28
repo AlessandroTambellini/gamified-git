@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import "./index.css";
-import Gitle from "./routes/gitle";
+import Gitle from "./routes/Gitle/Gitle";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
