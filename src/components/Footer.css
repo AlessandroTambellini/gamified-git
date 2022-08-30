@@ -1,0 +1,4 @@
+.social-list {
+  display: flex;
+  gap: var(--size-400);
+}
