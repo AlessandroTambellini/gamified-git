@@ -1,13 +1,285 @@
-body {
+/* 
+=== Styling Setup  === 
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Ubuntu:wght@400;500;700&display=swap");
+
+:root {
+  --clr-primary-orange: 11, 93%, 56%;
+  --clr-primary-dark: 28, 13%, 23%;
+  --clr-neutral: 60, 19%, 92%;
+  --clr-secondary: 193, 97%, 34;
+
+  --ff-primary: "Ubuntu", sans-serif;
+  --ff-code: "Courier Prime", monospace;
+  --ff-body: var(--ff-primary);
+  --ff-heading: var(--ff-primary);
+
+  --fw-regular: 400;
+  --fw-semi-bold: 500;
+  --fw-bold: 700;
+
+  --fs-small: 0.875rem;
+  --fs-medium: 1rem;
+  --fs-big: 1.5rem;
+  --fs-huge: 2.5rem;
+
+  --fs-body: var(--fs-medium);
+  --fs-nav: var(--fs-500);
+  --fs-button: var(--fs-300);
+
+  --default-radius: 2px;
+  --default-opacity: 0.75;
+
+  --size-100: 0.25rem;
+  --size-200: 0.5rem;
+  --size-300: 0.75rem;
+  --size-400: 1rem;
+  --size-500: 1.5rem;
+  --size-600: 2rem;
+  --size-700: 3rem;
+  --size-800: 4rem;
+  --size-900: 5rem;
+}
+
+@media (min-width: 35em) {
+  :root {
+    --fs-big: 2rem;
+    --fs-huge: 3.5rem;
+    --fs-medium: 1.125rem;
+  }
+}
+
+@media (min-width: 45em) {
+  :root {
+    --fs-big: 2.5rem;
+    --fs-huge: 4.5rem;
+    --fs-medium: 1.25rem;
+    --fs-small: 1rem;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  font: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer 
+not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* 
+=== Brand Styling ===
+*/
+
+body {
+  font-size: var(--fs-medium);
+  font-family: var(--ff-body);
+  color: hsl(var(--clr-primary-dark));
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: var(--ff-code);
+}
+
+p {
+  max-width: 60ch;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+.button {
+  display: inline-flex;
+  border-radius: 100vmax;
+  text-decoration: none; /* just in case there's a link with the style of a button */
+  padding: var(--size-400) var(--size-600);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-button);
+  border: 0;
+  background-color: hsl(var(--clr-primary-orange));
+  color: hsl(var(--clr-neutral));
+}
+.button[data-type="inverted"] {
+  background-color: hsl(var(--clr-neutral));
+  color: hsl(var(--clr-primary-orange));
+}
+.button:where(:hover, :focus-visible) {
+  background-color: hsla(var(--clr-primary-orange), var(--default-opacity));
+}
+.button[data-type="inverted"]:where(:hover, :focus-visible) {
+  background-color: hsla(var(--clr-neutral), var(--default-opacity));
+}
+
+/* 
+=== Utility Classes ===
+*/
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.container {
+  --max-width: 1100px;
+  --padding: 1rem;
+
+  width: min(var(--max-width), 100% - (var(--padding) * 2));
+  margin-inline: auto;
+}
+
+.even-columns {
+  display: grid;
+  gap: var(--size-400);
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+}
+
+.vertical-align-center {
+  align-items: center;
+}
+
+.justify-self-end {
+  justify-self: end;
+}
+
+:where(.flow > :not(:first-child)) {
+  margin-top: var(--flow-spacer, 1em);
+}
+
+.text-center {
+  text-align: center;
+}
+.text-center p {
+  margin-inline: auto;
+}
+@media (max-width: 50em) {
+  .text-center-sm-only {
+    text-align: center;
+  }
+  .text-center-sm-only p {
+    margin-inline: auto;
+  }
+}
+
+.text-primary-orange {
+  color: hsl(var(--clr-primary-orange));
+}
+.text-primary-dark {
+  color: hsl(var(--clr-primary-dark));
+}
+.text-secondary {
+  color: hsl(var(--clr-secondary));
+}
+.text-neutral {
+  color: hsl(var(--clr-neutral));
+}
+
+.bg-primary-orange {
+  background-color: hsl(var(--clr-primary-orange));
+}
+.bg-primary-dark {
+  background-color: hsl(var(--clr-primary-dark));
+}
+.bg-secondary {
+  background-color: hsl(var(--clr-secondary));
+}
+.bg-neutral {
+  background-color: hsl(var(--clr-neutral));
+}
+
+.fw-regular {
+  font-weight: var(--fw-regular);
+}
+.fw-semi-bold {
+  font-weight: var(--fw-semi-bold);
+}
+.fw-bold {
+  font-weight: var(--fw-bold);
+}
+
+.fs-small {
+  font-size: var(--fs-small);
+}
+.fs-medium {
+  font-size: var(--fs-medium);
+}
+.fs-big {
+  font-size: var(--fs-big);
+  line-height: 1.1;
+}
+.fs-huge {
+  font-size: var(--fs-huge);
+  line-height: 1.1;
+}
+
+.display-none {
+  display: none;
+}
+.display-block {
+  display: block;
+}
+
+@media (min-width: 50em) {
+  .display-md-inline-flex {
+    display: inline-flex;
+  }
 }
