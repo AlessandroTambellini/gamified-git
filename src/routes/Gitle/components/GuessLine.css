@@ -1,13 +1,12 @@
-.line {
-  display: flex;
-  margin: auto;
-}
-
 .tile {
-  width: 40px;
-  height: 40px;
-  border: 1px solid hsl(28, 13%, 23%);
-  font-size: 30px;
+  width: calc(2 * var(--fs-big));
+  margin: var(--size-100);
+  background-color: hsl(var(--clr-primary-dark));
+  box-shadow: 3px 3px 1px hsl(var(--clr-primary-dark), var(--default-opacity));
+  border-radius: var(--default-radius);
+  color: hsl(var(--clr-neutral));
+  aspect-ratio: 1;
+  font-size: var(--fs-big);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,15 +14,13 @@
 }
 
 .correct {
-  background-color: hsl(11, 92%, 56%);
+  background-color: hsl(var(--clr-primary-orange));
 }
 
-.close {
-  background-color: hsla(193, 97%, 34%, 0.481);
+.to-swap {
+  background-color: hsl(var(--clr-secondary));
 }
 
 .incorrect {
-  background-color: hsl(53, 10%, 83%);
+  background-color: hsla(var(--clr-primary-dark), var(--default-opacity));
 }
-
-/* hsl(28,13%,23%) */

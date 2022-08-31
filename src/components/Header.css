@@ -1,3 +1,7 @@
+#header {
+  margin-bottom: var(--size-600);
+}
+
 .primary-header {
   padding-top: var(--size-500);
 }

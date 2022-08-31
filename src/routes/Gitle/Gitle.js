@@ -3,8 +3,8 @@ import GuessLine from "./components/GuessLine";
 import "./Gitle.css";
 
 const NUM_GUESSES = 6;
-const WORD_LENGTH = 10;
-const SOLUTION = "stage".padEnd(WORD_LENGTH);
+const WORD_LENGTH = 5;
+const SOLUTION = "stage";
 
 function Gitle() {
   const [guesses, setGuesses] = useState(Array(NUM_GUESSES).fill(null));
@@ -24,10 +24,10 @@ function Gitle() {
       setCurrentGuess((prevGuess) => {
         if (event.key === "Backspace") return prevGuess.slice(0, -1);
 
-        if (event.key === "Enter") {
+        if (event.key === "Enter" && prevGuess.length === WORD_LENGTH) {
           const currentGuessIndex = guesses.findIndex((guess) => guess == null);
           const guessesClone = [...guesses];
-          guessesClone[currentGuessIndex] = prevGuess.padEnd(WORD_LENGTH);
+          guessesClone[currentGuessIndex] = prevGuess;
           setGuesses(guessesClone);
           return "";
         }
@@ -46,8 +46,8 @@ function Gitle() {
 
   return (
     <>
-      <h1>Gitle</h1>
-      <main className="board">
+      <h1 className="display-none">Gitle</h1>
+      <main className="container">
         {guesses.map((guess, i) => {
           return (
             <GuessLine

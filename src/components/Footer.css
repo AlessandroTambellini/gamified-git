@@ -1,3 +1,7 @@
+#footer {
+  margin-top: var(--size-600);
+}
+
 .social-list {
   display: flex;
   gap: var(--size-400);

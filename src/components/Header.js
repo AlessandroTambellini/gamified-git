@@ -8,6 +8,7 @@ function Header() {
 
   return (
     <header
+      id="header"
       className={`primary-header ${showNav && "dark-layer"}`}
       onClick={() => showNav && setShowNav(false)}
     >

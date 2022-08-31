@@ -2,7 +2,7 @@ import "./Footer.css";
 
 function Footer() {
   return (
-    <footer className="bg-neutral">
+    <footer id="footer" className="bg-neutral">
       <div className="container even-columns">
         <ul className="social-list" aria-label="social links">
           <li>

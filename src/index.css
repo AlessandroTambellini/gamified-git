@@ -8,7 +8,7 @@
   --clr-primary-orange: 11, 93%, 56%;
   --clr-primary-dark: 28, 13%, 23%;
   --clr-neutral: 60, 19%, 92%;
-  --clr-secondary: 193, 97%, 34;
+  --clr-secondary: 193, 97%, 34%;
 
   --ff-primary: "Ubuntu", sans-serif;
   --ff-code: "Courier Prime", monospace;
@@ -30,6 +30,7 @@
 
   --default-radius: 2px;
   --default-opacity: 0.75;
+  --default-border-width: 1px;
 
   --size-100: 0.25rem;
   --size-200: 0.5rem;
@@ -199,6 +200,12 @@ button {
 
 .justify-self-end {
   justify-self: end;
+}
+
+.centered-flex {
+  display: flex;
+  width: fit-content;
+  margin: auto;
 }
 
 :where(.flow > :not(:first-child)) {
