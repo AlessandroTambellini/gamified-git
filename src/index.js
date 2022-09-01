@@ -4,9 +4,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from "./App";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Gitle from "./routes/Gitle/Gitle";
+import Quiz from "./routes/Quiz/Quiz";
 import reportWebVitals from "./reportWebVitals";
 import "./index.css";
-import Gitle from "./routes/Gitle/Gitle";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -16,6 +17,7 @@ root.render(
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="gitle" element={<Gitle />} />
+        <Route path="quiz" element={<Quiz />} />
       </Routes>
       <Footer />
     </BrowserRouter>

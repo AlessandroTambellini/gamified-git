@@ -1,3 +1,9 @@
+#gitle-line {
+  display: flex;
+  width: fit-content;
+  margin: auto;
+}
+
 .tile {
   width: calc(2 * var(--fs-big));
   margin: var(--size-100);
@@ -13,14 +19,8 @@
   text-transform: capitalize;
 }
 
-.correct {
-  background-color: hsl(var(--clr-primary-orange));
-}
-
-.to-swap {
-  background-color: hsl(var(--clr-secondary));
-}
-
+.correct,
+.to-swap,
 .incorrect {
-  background-color: hsla(var(--clr-primary-dark), var(--default-opacity));
+  color: hsl(var(--clr-neutral)) !important;
 }

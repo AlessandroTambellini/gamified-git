@@ -1,0 +1,28 @@
+#quiz-container {
+  --max-width: 800px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--size-600);
+}
+
+main {
+  flex-grow: 1;
+}
+
+main h2 {
+  margin: var(--size-300) 0;
+}
+
+#quiz-container ul > li {
+  border-radius: var(--default-radius);
+  padding: var(--size-200) 0;
+  cursor: pointer;
+}
+
+.correct {
+  --color: var(--clr-neutral);
+}
+.incorrect {
+  --color: var(--clr-neutral);
+}

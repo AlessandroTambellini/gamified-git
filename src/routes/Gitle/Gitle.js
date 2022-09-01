@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import GuessLine from "./components/GuessLine";
-import "./Gitle.css";
 
 const NUM_GUESSES = 6;
 const WORD_LENGTH = 5;

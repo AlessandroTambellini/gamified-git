@@ -32,7 +32,7 @@ function Header() {
               <Link to="/gitle">Gitle</Link>
             </li>
             <li>
-              <Link to="#">Quizzes</Link>
+              <Link to="/Quiz">Quiz</Link>
             </li>
             <li>
               <Link to="#">Prompt</Link>

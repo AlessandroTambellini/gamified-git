@@ -3,7 +3,7 @@ import "./GuessLine.css";
 
 function GuessLine({ guess, solution, isColored }) {
   return (
-    <div id="gitle-line" className="centered-flex">
+    <div id="gitle-line">
       {guess.split("").map((char, i) => {
         let className = "tile";
         if (isColored) {
