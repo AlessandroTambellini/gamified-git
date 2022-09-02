@@ -2,13 +2,31 @@ import "./App.css";
 
 function App() {
   return (
-    <main className="App">
-      <h1 className="fs-huge fw-bold text-center">Git</h1>
-      <div className="container">
-        <div>random</div>
-        <div>more random</div>
-      </div>
-    </main>
+    <>
+      <main className="container">
+        <article>
+          <h2 className="fs-big">Colors Legend</h2>
+          <ul className="fs-medium">
+            <li>
+              <span className="color-square bg-primary-orange"></span> Primary
+              Orange &cong; correct, right
+            </li>
+            <li>
+              <span className="color-square bg-primary-dark"></span> Primary
+              Dark &cong; wrong, mistake
+            </li>
+            <li>
+              <span className="color-square bg-neutral"></span> Neutral Grey
+              &cong;
+            </li>
+            <li>
+              <span className="color-square bg-secondary"></span> Secondary Blue
+              &cong; almost, swapped
+            </li>
+          </ul>
+        </article>
+      </main>
+    </>
   );
 }
 

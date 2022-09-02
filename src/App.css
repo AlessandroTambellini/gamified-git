@@ -1,19 +1,13 @@
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+li {
+  display: flex;
+  align-items: center;
+  gap: var(--size-400);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.color-square {
+  display: block;
+  width: var(--size-400);
+  height: var(--size-400);
+  border-radius: var(--default-radius);
+  box-shadow: 3px 3px 1px hsl(var(--clr-primary-dark), var(--default-opacity));
 }

@@ -131,7 +131,8 @@ code {
   font-family: var(--ff-code);
 }
 
-p {
+p,
+li {
   max-width: 60ch;
 }
 
@@ -179,7 +180,7 @@ button {
 === Utility Classes ===
 */
 
-.visually-hidden {
+.sr-only {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   height: 1px;

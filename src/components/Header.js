@@ -21,7 +21,7 @@ function Header() {
           onClick={() => setShowNav(true)}
         >
           <Hamburger aria-hidden="true" />
-          <span className="visually-hidden">Menu</span>
+          <span className="sr-only">Menu</span>
         </button>
         <nav
           className={`primary-nav ${showNav && "display-block"}`}

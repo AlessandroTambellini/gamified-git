@@ -62,6 +62,7 @@ export default function Quiz() {
           onClick={() => setCurrQuestionIdx(currQuestionIdx - 1)}
         >
           &laquo;
+          <span className="sr-only">Previous Question</span>
         </button>
 
         <main>
@@ -99,6 +100,7 @@ export default function Quiz() {
           disabled={isLastQuestion || selectedAnswers[currQuestionIdx] == null}
           onClick={() => setCurrQuestionIdx(currQuestionIdx + 1)}
         >
+          <span className="sr-only">Next Question</span>
           &raquo;
         </button>
       </div>
