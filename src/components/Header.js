@@ -15,7 +15,7 @@ function Header() {
       <div className="container nav-wrapper">
         <Link to="/">Gamified Git</Link>
         <button
-          className="mobile-nav-toggle"
+          className="icon-button"
           aria-controls="primary-nav"
           aria-expanded={showNav ? "true" : "false"}
           onClick={() => setShowNav(true)}

@@ -18,9 +18,7 @@
   align-items: center;
   text-transform: capitalize;
 }
-
-.correct,
-.to-swap,
-.incorrect {
-  color: hsl(var(--clr-neutral)) !important;
-}
+/* 
+.correct {
+  --clr-correct: var(--clr-primary-orange);
+} */

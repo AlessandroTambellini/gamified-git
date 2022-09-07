@@ -157,22 +157,32 @@ button {
   color: hsl(var(--clr-primary-orange));
 }
 .button:where(:hover, :focus-visible) {
-  background-color: hsla(var(--clr-primary-orange), var(--default-opacity));
+  opacity: var(--default-opacity);
 }
 .button[data-type="inverted"]:where(:hover, :focus-visible) {
-  background-color: hsla(var(--clr-neutral), var(--default-opacity));
+  opacity: var(--default-opacity);
+}
+
+.icon-button {
+  display: inline-flex;
+  background: transparent;
+  border: 0;
+  padding: var(--size-200);
+}
+.icon-button:where(:hover, :focus-visible) {
+  opacity: var(--default-opacity);
 }
 
 .correct {
-  color: hsl(var(--clr-correct));
+  color: hsl(var(--clr-correct, var(--clr-neutral)));
   background-color: hsl(var(--clr-primary-orange));
 }
 .to-swap {
-  color: hsl(var(--clr-to-swap));
+  color: hsl(var(--clr-to-swap, var(--clr-neutral)));
   background-color: hsl(var(--clr-secondary));
 }
 .incorrect {
-  color: hsl(var(--clr-incorrect));
+  color: hsl(var(--clr-incorrect, var(--clr-neutral)));
   background-color: hsla(var(--clr-primary-dark), var(--default-opacity));
 }
 

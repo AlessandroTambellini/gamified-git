@@ -8,11 +8,11 @@
 
 .nav-wrapper {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
 }
 
-.mobile-nav-toggle {
+#header .icon-button {
   display: none;
 }
 
@@ -61,10 +61,7 @@
     font-weight: var(--fw-bold);
   }
 
-  .mobile-nav-toggle {
-    display: block;
-    background: transparent;
-    border: 0;
-    padding: var(--size-200);
+  #header .icon-button {
+    display: inline-flex;
   }
 }

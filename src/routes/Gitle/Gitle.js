@@ -3,7 +3,7 @@ import GuessLine from "./components/GuessLine";
 
 const NUM_GUESSES = 6;
 const WORD_LENGTH = 5;
-const SOLUTION = "stage";
+const SOLUTION = "stash";
 
 function Gitle() {
   const [guesses, setGuesses] = useState(Array(NUM_GUESSES).fill(null));
@@ -46,7 +46,7 @@ function Gitle() {
   return (
     <>
       <h1 className="display-none">Gitle</h1>
-      <main className="container">
+      <main className="container text-center">
         {guesses.map((guess, i) => {
           return (
             <GuessLine
@@ -60,6 +60,24 @@ function Gitle() {
             />
           );
         })}
+
+        {guesses[NUM_GUESSES - 1] != null && !guesses.includes(SOLUTION) && (
+          <button
+            onClick={() => {
+              setCurrentGuess("");
+              setGuesses(Array(NUM_GUESSES).fill(null));
+            }}
+            className="icon-button fs-huge text-primary-dark"
+          >
+            &#10226;<span className="sr-only">Try again</span>
+          </button>
+        )}
+
+        {guesses.includes(SOLUTION) && (
+          <a target="_blank" href={`https://git-scm.com/docs/git-${SOLUTION}`}>
+            {SOLUTION}
+          </a>
+        )}
       </main>
     </>
   );
