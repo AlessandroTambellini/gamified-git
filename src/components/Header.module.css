@@ -1,9 +1,6 @@
-#header {
-  margin-bottom: var(--size-600);
-}
-
 .primary-header {
   padding-top: var(--size-500);
+  margin-bottom: var(--size-600);
 }
 
 .nav-wrapper {
@@ -12,7 +9,7 @@
   align-items: center;
 }
 
-#header .icon-button {
+.nav-toggle {
   display: none;
 }
 
@@ -61,7 +58,7 @@
     font-weight: var(--fw-bold);
   }
 
-  #header .icon-button {
+  .nav-toggle {
     display: inline-flex;
   }
 }

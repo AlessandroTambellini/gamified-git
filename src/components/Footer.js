@@ -1,10 +1,10 @@
-import "./Footer.css";
+import styles from "./Footer.module.css";
 
 function Footer() {
   return (
-    <footer id="footer" className="bg-neutral">
-      <div className="container even-columns">
-        <ul className="social-list" aria-label="social links">
+    <footer className={`${styles.footer} bg-neutral`}>
+      <div className={`container ${styles["even-columns"]}`}>
+        <ul className={`${styles["social-list"]}`} aria-label="social links">
           <li>
             <a
               aria-label="Codewars"
@@ -36,7 +36,7 @@ function Footer() {
           </li>
         </ul>
 
-        <a className="justify-self-end" href="../LICENSE">
+        <a className={`${styles["justify-self-end"]}`} href="../LICENSE">
           LICENSE
         </a>
       </div>

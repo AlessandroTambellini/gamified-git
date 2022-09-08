@@ -1,21 +1,22 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { ReactComponent as Hamburger } from "../SVG/icon-hamburger.svg";
-import "./Header.css";
+import styles from "./Header.module.css";
 
 function Header() {
   const [showNav, setShowNav] = useState(false);
 
   return (
     <header
-      id="header"
-      className={`primary-header ${showNav && "dark-layer"}`}
+      className={`${styles["primary-header"]} ${
+        showNav && styles["dark-layer"]
+      }`}
       onClick={() => showNav && setShowNav(false)}
     >
-      <div className="container nav-wrapper">
+      <div className={`${styles["nav-wrapper"]} container`}>
         <Link to="/">Gamified Git</Link>
         <button
-          className="icon-button"
+          className={`${styles["nav-toggle"]} icon-button`}
           aria-controls="primary-nav"
           aria-expanded={showNav ? "true" : "false"}
           onClick={() => setShowNav(true)}
@@ -24,10 +25,10 @@ function Header() {
           <span className="sr-only">Menu</span>
         </button>
         <nav
-          className={`primary-nav ${showNav && "display-block"}`}
+          className={`${styles["primary-nav"]} ${showNav && "display-block"}`}
           id="primary-nav"
         >
-          <ul className="nav-list" aria-label="Primary">
+          <ul className={`${styles["nav-list"]}`} aria-label="Primary">
             <li>
               <Link to="/gitle">Gitle</Link>
             </li>
