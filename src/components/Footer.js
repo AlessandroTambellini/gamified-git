@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styles from "./Footer.module.css";
 
 function Footer() {
@@ -36,7 +37,10 @@ function Footer() {
           </li>
         </ul>
 
-        <a className={`${styles["justify-self-end"]}`} href="../LICENSE">
+        <a
+          className={`${styles["justify-self-end"]}`}
+          href="https://github.com/AlessandroTambellini/gamified-git/blob/main/LICENSE"
+        >
           LICENSE
         </a>
       </div>

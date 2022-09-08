@@ -16,7 +16,7 @@ function Header() {
       <div className={`${styles["nav-wrapper"]} container`}>
         <Link to="/">Gamified Git</Link>
         <button
-          className={`${styles["nav-toggle"]} icon-button`}
+          className={`${styles["icon-button"]} icon-button`}
           aria-controls="primary-nav"
           aria-expanded={showNav ? "true" : "false"}
           onClick={() => setShowNav(true)}

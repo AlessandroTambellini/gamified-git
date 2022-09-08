@@ -168,7 +168,6 @@ button {
 }
 
 .icon-button {
-  display: inline-flex;
   background: transparent;
   border: 0;
   padding: var(--size-200);

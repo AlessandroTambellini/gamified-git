@@ -9,7 +9,7 @@
   align-items: center;
 }
 
-.nav-toggle {
+.icon-button {
   display: none;
 }
 
@@ -58,7 +58,7 @@
     font-weight: var(--fw-bold);
   }
 
-  .nav-toggle {
+  .icon-button {
     display: inline-flex;
   }
 }
