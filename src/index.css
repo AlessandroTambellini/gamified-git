@@ -271,6 +271,23 @@ button {
   line-height: 1.1;
 }
 
+.icon-small {
+  height: var(--fs-small);
+  display: inline-flex;
+}
+.icon-medium {
+  height: var(--fs-medium);
+  display: inline-flex;
+}
+.icon-big {
+  height: var(--fs-big);
+  display: inline-flex;
+}
+.icon-huge {
+  height: var(--fs-huge);
+  display: inline-flex;
+}
+
 .display-none {
   display: none;
 }

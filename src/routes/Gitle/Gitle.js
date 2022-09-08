@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import GuessLine from "./components/GuessLine";
+import { ReactComponent as OpenInNewTab } from "../../SVG/arrow-up-right-from-square-solid.svg";
 
 const NUM_GUESSES = 6;
 const WORD_LENGTH = 5;
@@ -74,8 +75,12 @@ function Gitle() {
         )}
 
         {guesses.includes(SOLUTION) && (
-          <a target="_blank" href={`https://git-scm.com/docs/git-${SOLUTION}`}>
-            {SOLUTION}
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href={`https://git-scm.com/docs/git-${SOLUTION}`}
+          >
+            {SOLUTION} <OpenInNewTab className="icon-medium" />
           </a>
         )}
       </main>

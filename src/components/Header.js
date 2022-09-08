@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { ReactComponent as Hamburger } from "../SVG/icon-hamburger.svg";
+import { ReactComponent as Hamburger } from "../SVG/bars-solid.svg";
 import styles from "./Header.module.css";
 
 function Header() {
@@ -21,7 +21,7 @@ function Header() {
           aria-expanded={showNav ? "true" : "false"}
           onClick={() => setShowNav(true)}
         >
-          <Hamburger aria-hidden="true" />
+          <Hamburger className="icon-medium" aria-hidden="true" />
           <span className="sr-only">Menu</span>
         </button>
         <nav

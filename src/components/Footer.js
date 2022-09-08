@@ -1,5 +1,7 @@
-import { Link } from "react-router-dom";
 import styles from "./Footer.module.css";
+import { ReactComponent as Twitter } from "../SVG/twitter.svg";
+import { ReactComponent as LinkedIn } from "../SVG/linkedin.svg";
+import { ReactComponent as GitHub } from "../SVG/github.svg";
 
 function Footer() {
   return (
@@ -19,7 +21,7 @@ function Footer() {
               aria-label="LinkedIn"
               href="https://www.linkedin.com/in/alessandro-tambellini-3739321b9/"
             >
-              LinkedIn
+              <LinkedIn className="icon-medium" />
             </a>
           </li>
           <li>
@@ -27,12 +29,12 @@ function Footer() {
               aria-label="GitHub"
               href="https://github.com/AlessandroTambellini"
             >
-              GitHub
+              <GitHub className="icon-medium" />
             </a>
           </li>
           <li>
             <a aria-label="Twitter" href="https://twitter.com/Alessan78667092">
-              Twitter
+              <Twitter className="icon-medium" />
             </a>
           </li>
         </ul>
