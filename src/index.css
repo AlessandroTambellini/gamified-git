@@ -162,6 +162,9 @@ button {
 .button[data-type="inverted"]:where(:hover, :focus-visible) {
   opacity: var(--default-opacity);
 }
+.button[disabled][data-type="inverted"] {
+  opacity: 0.5;
+}
 
 .icon-button {
   display: inline-flex;

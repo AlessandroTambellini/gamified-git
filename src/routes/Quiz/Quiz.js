@@ -33,6 +33,7 @@ export default function Quiz() {
   const [questions, setQuestions] = useState(null);
   const [currQuestionIdx, setCurrQuestionIdx] = useState(0);
   const [selectedAnswers, setSelectedAnswers] = useState([]);
+  const [correctAnswers, setCorrectAnswers] = useState(0);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -86,6 +87,10 @@ export default function Quiz() {
                   onClick={() => {
                     if (!selectedAnswer)
                       setSelectedAnswers([...selectedAnswers, answerIdx]);
+
+                    console.log(answerIdx, currQuestion.correctAnswer);
+                    if (answerIdx === currQuestion.correctAnswer)
+                      setCorrectAnswers(correctAnswers + 1);
                   }}
                 >
                   <span className="fw-bold">$</span> {answer}
@@ -93,6 +98,28 @@ export default function Quiz() {
               );
             })}
           </ul>
+
+          <p className="text-center">
+            {selectedAnswers.length === questions.length ? (
+              <>
+                Correct answers: {correctAnswers} / {questions.length}
+                <br />
+                <button
+                  className="button"
+                  onClick={() => {
+                    setCurrQuestionIdx(0);
+                    setSelectedAnswers([]);
+                  }}
+                >
+                  Restart Quiz
+                </button>
+              </>
+            ) : (
+              <>
+                {currQuestionIdx + 1} / {questions.length}
+              </>
+            )}
+          </p>
         </main>
         <button
           className="button"

@@ -17,7 +17,7 @@ function App() {
             </li>
             <li>
               <span className="color-square bg-neutral"></span> Neutral Grey
-              &cong;
+              &cong; unresponsive, disabled, background
             </li>
             <li>
               <span className="color-square bg-secondary"></span> Secondary Blue
