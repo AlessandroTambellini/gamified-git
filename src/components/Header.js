@@ -33,10 +33,10 @@ function Header() {
               <Link to="/gitle">Gitle</Link>
             </li>
             <li>
-              <Link to="/Quiz">Quiz</Link>
+              <Link to="/quiz">Quiz</Link>
             </li>
             <li>
-              <Link to="#">Prompt</Link>
+              <Link to="/prompt">Prompt</Link>
             </li>
           </ul>
         </nav>

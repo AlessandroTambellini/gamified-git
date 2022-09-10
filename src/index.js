@@ -5,6 +5,7 @@ import App from "./App";
 import Intro from "./routes/Intro";
 import Gitle from "./routes/Gitle/Gitle";
 import Quiz from "./routes/Quiz/Quiz";
+import Prompt from "./routes/Prompt";
 import reportWebVitals from "./reportWebVitals";
 import "./index.css";
 
@@ -17,6 +18,7 @@ root.render(
           <Route index element={<Intro />} />
           <Route path="gitle" element={<Gitle />} />
           <Route path="quiz" element={<Quiz />} />
+          <Route path="prompt" element={<Prompt />} />
         </Route>
       </Routes>
     </BrowserRouter>
