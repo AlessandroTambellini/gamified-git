@@ -233,6 +233,13 @@ button {
   color: hsl(var(--clr-neutral));
 }
 
+.primary-link {
+  color: hsl(var(--clr-primary-orange));
+}
+.secondary-link {
+  color: hsl(var(--clr-secondary));
+}
+
 .bg-primary-orange {
   background-color: hsl(var(--clr-primary-orange));
 }
@@ -286,6 +293,13 @@ button {
 .icon-huge {
   height: var(--fs-huge);
   display: inline-flex;
+}
+
+.primary-icon {
+  fill: hsl(var(--clr-primary-orange));
+}
+.secondary-icon {
+  fill: hsl(var(--clr-secondary));
 }
 
 .display-none {

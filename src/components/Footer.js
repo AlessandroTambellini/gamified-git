@@ -8,7 +8,7 @@ function Footer() {
     <footer className={`${styles.footer} bg-neutral`}>
       <div className={`container ${styles["even-columns"]}`}>
         <ul className={`${styles["social-list"]}`} aria-label="social links">
-          <li>
+          {/*           <li>
             <a
               aria-label="Codewars"
               href="https://www.codewars.com/users/AlessandroTambellini"
@@ -16,12 +16,13 @@ function Footer() {
               Codewars
             </a>
           </li>
+           */}
           <li>
             <a
               aria-label="LinkedIn"
               href="https://www.linkedin.com/in/alessandro-tambellini-3739321b9/"
             >
-              <LinkedIn className="icon-medium" />
+              <LinkedIn className="secondary-icon icon-medium" />
             </a>
           </li>
           <li>
@@ -29,18 +30,18 @@ function Footer() {
               aria-label="GitHub"
               href="https://github.com/AlessandroTambellini"
             >
-              <GitHub className="icon-medium" />
+              <GitHub className="secondary-icon icon-medium" />
             </a>
           </li>
           <li>
             <a aria-label="Twitter" href="https://twitter.com/Alessan78667092">
-              <Twitter className="icon-medium" />
+              <Twitter className="secondary-icon icon-medium" />
             </a>
           </li>
         </ul>
 
         <a
-          className={`${styles["justify-self-end"]}`}
+          className={`secondary-link ${styles["justify-self-end"]}`}
           href="https://github.com/AlessandroTambellini/gamified-git/blob/main/LICENSE"
         >
           LICENSE

@@ -6,11 +6,11 @@ function Intro() {
         <ul className="fs-medium">
           <li>
             <span className="color-square bg-primary-orange"></span> Primary
-            Orange &cong; correct, right
+            Orange &cong; correct, right, important
           </li>
           <li>
             <span className="color-square bg-primary-dark"></span> Primary Dark
-            &cong; wrong, mistake
+            &cong; wrong, mistake, background
           </li>
           <li>
             <span className="color-square bg-neutral"></span> Neutral Grey
@@ -18,7 +18,7 @@ function Intro() {
           </li>
           <li>
             <span className="color-square bg-secondary"></span> Secondary Blue
-            &cong; almost, swapped
+            &cong; almost, swapped, secondary content
           </li>
         </ul>
       </article>

@@ -76,11 +76,12 @@ function Gitle() {
 
         {guesses.includes(SOLUTION) && (
           <a
+            className="primary-link"
             target="_blank"
             rel="noreferrer"
             href={`https://git-scm.com/docs/git-${SOLUTION}`}
           >
-            {SOLUTION} <OpenInNewTab className="icon-medium" />
+            {SOLUTION} <OpenInNewTab className="primary-icon icon-medium" />
           </a>
         )}
       </main>
